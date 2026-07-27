@@ -320,17 +320,40 @@
         <p>&copy; 2026 Conecta Ariquemes. Todos os direitos reservados.</p>
     </footer>
 
-    <script>
-        function switchTab(tabId, event) {
-            document.querySelectorAll('.content-section').forEach(section => {
-                section.classList.remove('active');
-            });
-            document.querySelectorAll('.nav-tab').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            document.getElementById(tabId).classList.add('active');
+  <script>
+    function switchTab(tabId, event, updateHash = true) {
+        document.querySelectorAll('.content-section').forEach(section => {
+            section.classList.remove('active');
+        });
+        document.querySelectorAll('.nav-tab').forEach(tab => {
+            tab.classList.remove('active');
+        });
+        
+        document.getElementById(tabId).classList.add('active');
+        
+
+        if (event) {
             event.currentTarget.classList.add('active');
+        } else {
+          
+            if(tabId === 'privacy') document.querySelectorAll('.nav-tab')[0].classList.add('active');
+            if(tabId === 'terms') document.querySelectorAll('.nav-tab')[1].classList.add('active');
         }
-    </script>
+
+        if (updateHash) {
+            window.location.hash = tabId;
+        }
+    }
+
+    // Ao carregar a página, verifica se há um hash na URL (ex: #terms)
+    window.addEventListener('DOMContentLoaded', () => {
+        const hash = window.location.hash.replace('#', '');
+        if (hash === 'terms') {
+            switchTab('terms', null, false);
+        } else {
+            switchTab('privacy', null, false);
+        }
+    });
+</script>
 </body>
 </html>
