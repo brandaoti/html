@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conecta Ariquemes — Legal</title>
+    <title>Conecta Ariquemes — Políticas e Termos</title>
     <style>
         :root {
             --primary-color: #0d6efd;
@@ -30,7 +30,7 @@
         }
 
         header h1 {
-            margin: 0 0 0.5rem 0;
+            margin: 0 0 0.3rem 0;
             color: var(--primary-color);
         }
 
@@ -127,7 +127,7 @@
 
     <header>
         <h1>Conecta Ariquemes</h1>
-        <p>Documentação Legal e Termos de Uso</p>
+        <p>Aplicativo Oficial de Serviços Públicos e Cidadania</p>
     </header>
 
     <div class="nav-tabs">
@@ -136,7 +136,7 @@
     </div>
 
     <div class="container">
-        <!-- POLÍTICA DE PRIVACIDADE -->
+        <!-- POLÍTICA DE PRIVACIDADE (Texto Original Fornecido) -->
         <div id="privacy" class="content-section active">
             <h2>Política de Privacidade</h2>
             <div class="update-date">Última atualização: 18 de abril de 2026</div>
@@ -149,27 +149,42 @@
             Contato para assuntos de privacidade: infra.procint.ariquemes@ifro.edu.br</p>
 
             <h3>2. Dados Pessoais Coletados</h3>
-            <p><strong>2.1 Dados de Identificação e Contato</strong><br>
-            Coletados durante o cadastro e autenticação (via serviço Keycloak): Nome completo, CPF, E-mail (opcional), Telefone (opcional), Identificador único de usuário.</p>
             
-            <p><strong>2.2 Dados de Localização</strong><br>
-            Coordenadas GPS (latitude/longitude): coletadas sob demanda quando você utiliza funcionalidades dependentes da sua localização, como busca de farmácias próximas ou preenchimento automático de endereço.<br>
-            Endereço (rua, número, bairro, cidade, estado, CEP): informado por você ao registrar denúncias de problemas urbanos ou ao preencher dados de entrega.<br>
-            Consultas ao serviço público ViaCEP para autopreenchimento de endereço a partir do CEP digitado.</p>
+            <p><strong>2.1 Dados de Identificação e Contato</strong><br>
+            Coletados durante o cadastro e autenticação (via serviço Keycloak):</p>
+            <ul>
+                <li>Nome completo</li>
+                <li>CPF</li>
+                <li>E-mail (opcional)</li>
+                <li>Telefone (opcional)</li>
+                <li>Identificador único de usuário</li>
+            </ul>
 
-            <p><strong>2.3 Dados de Dispositivo</strong><br>
-            Token de registro do Firebase Cloud Messaging (FCM) e, no iOS, token APNs — utilizados exclusivamente para entrega de notificações push.<br>
-            Plataforma do dispositivo (Android/iOS).</p>
+            <p><strong>2.2 Dados de Localização</strong></p>
+            <ul>
+                <li>Coordenadas GPS (latitude/longitude): coletadas sob demanda quando você utiliza funcionalidades dependentes da sua localização, como busca de farmácias próximas ou preenchimento automático de endereço.</li>
+                <li>Endereço (rua, número, bairro, cidade, estado, CEP): informado por você ao registrar denúncias de problemas urbanos ou ao preencher dados de entrega.</li>
+                <li>Consultas ao serviço público ViaCEP para autopreenchimento de endereço a partir do CEP digitado.</li>
+            </ul>
 
-            <p><strong>2.4 Dados Gerados pelo Uso do Aplicativo</strong><br>
-            Denúncias de problemas urbanos: título, descrição, categoria, localização (coordenadas e endereço), fotografias enviadas como evidência.<br>
-            Manifestações à ouvidoria: título, descrição, data/horário do ocorrido, tipo, referência ao órgão público.<br>
-            Preferências locais como status de conclusão do onboarding.</p>
+            <p><strong>2.3 Dados de Dispositivo</strong></p>
+            <ul>
+                <li>Token de registro do Firebase Cloud Messaging (FCM) e, no iOS, token APNs — utilizados exclusivamente para entrega de notificações push.</li>
+                <li>Plataforma do dispositivo (Android/iOS).</li>
+            </ul>
+
+            <p><strong>2.4 Dados Gerados pelo Uso do Aplicativo</strong></p>
+            <ul>
+                <li>Denúncias de problemas urbanos: título, descrição, categoria, localização (coordenadas e endereço), fotografias enviadas como evidência.</li>
+                <li>Manifestações à ouvidoria: título, descrição, data/horário do ocorrido, tipo, referência ao órgão público.</li>
+                <li>Preferências locais como status de conclusão do onboarding.</li>
+            </ul>
 
             <p><strong>2.5 Dados de Autenticação</strong><br>
             Tokens de acesso, atualização e identificação (emitidos pelo Keycloak), armazenados de forma criptografada em área segura do dispositivo (Keychain no iOS, Keystore no Android).</p>
 
             <h3>3. Finalidades do Tratamento</h3>
+            <p>Utilizamos seus dados pessoais para:</p>
             <ul>
                 <li>Criar e gerenciar sua conta no aplicativo;</li>
                 <li>Autenticar seu acesso e manter sua sessão ativa;</li>
@@ -191,35 +206,59 @@
 
             <h3>5. Permissões Solicitadas pelo Aplicativo</h3>
             <ul>
-                <li><strong>Localização:</strong> solicitada apenas quando você utiliza funcionalidades que dependem da posição atual.</li>
-                <li><strong>Câmera:</strong> utilizada para captura de fotografias associadas a denúncias urbanas.</li>
-                <li><strong>Notificações:</strong> para envio de alertas e atualizações.</li>
-                <li><strong>Internet:</strong> para comunicação com os serviços de backend.</li>
+                <li><strong>Localização (ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION):</strong> solicitada apenas quando você utiliza funcionalidades que dependem da localização atual. Você pode negar ou revogar a qualquer momento nas configurações do dispositivo.</li>
+                <li><strong>Câmera (CAMERA):</strong> utilizada para captura de fotografias associadas a denúncias urbanas. Nenhuma imagem é capturada sem sua ação explícita.</li>
+                <li><strong>Notificações (POST_NOTIFICATIONS):</strong> para envio de alertas e atualizações.</li>
+                <li><strong>Internet (INTERNET):</strong> para comunicação com os serviços de backend.</li>
             </ul>
 
             <h3>6. Compartilhamento com Terceiros</h3>
-            <p>Seus dados podem ser compartilhados com o Google Firebase (notificações push), Keycloak (autenticação), ViaCEP (endereço) e Órgãos públicos competentes (encaminhamento de denúncias). Não vendemos, alugamos ou comercializamos seus dados pessoais.</p>
+            <p>Seus dados podem ser compartilhados com:</p>
+            <ul>
+                <li><strong>Google Firebase (Google LLC):</strong> utilizamos o Firebase Cloud Messaging para entrega de notificações push. O Firebase processa o token de registro do seu dispositivo. Consulte a Política de Privacidade do Firebase.</li>
+                <li><strong>Keycloak:</strong> provedor de identidade e autenticação utilizado pelo aplicativo.</li>
+                <li><strong>ViaCEP:</strong> serviço público brasileiro consultado para autopreenchimento de endereço a partir do CEP.</li>
+                <li><strong>Órgãos públicos competentes:</strong> para encaminhamento e tratamento das denúncias urbanas e manifestações à ouvidoria.</li>
+            </ul>
+            <p>Não vendemos, alugamos ou comercializamos seus dados pessoais.</p>
 
             <h3>7. Transferência Internacional de Dados</h3>
-            <p>Serviços como o Google Firebase podem armazenar dados em servidores localizados fora do Brasil, ocorrendo com base no consentimento e salvaguardas contratuais (art. 33 da LGPD).</p>
+            <p>Serviços como o Google Firebase podem armazenar dados em servidores localizados fora do Brasil. Essa transferência ocorre com base no consentimento e nas salvaguardas contratuais oferecidas pelo fornecedor, em conformidade com o art. 33 da LGPD.</p>
 
             <h3>8. Armazenamento e Segurança</h3>
-            <p>Tokens são armazenados de forma criptografada (Keychain/Keystore) e a comunicação com o backend ocorre exclusivamente via HTTPS.</p>
+            <ul>
+                <li>Tokens de autenticação são armazenados de forma criptografada em área segura do dispositivo (Keychain/Keystore).</li>
+                <li>A comunicação com o backend ocorre exclusivamente via HTTPS.</li>
+                <li>Aplicamos medidas técnicas e administrativas adequadas para proteger seus dados contra acesso não autorizado, perda ou alteração.</li>
+            </ul>
 
             <h3>9. Retenção dos Dados</h3>
-            <p>Os dados são mantidos pelo tempo necessário ao cumprimento das finalidades descritas ou conforme obrigação legal. Você pode solicitar a exclusão de sua conta a qualquer momento.</p>
+            <p>Os dados são mantidos pelo tempo necessário ao cumprimento das finalidades descritas nesta Política ou conforme exigido por obrigação legal. Você pode, a qualquer momento, solicitar a exclusão de sua conta e dos dados associados.</p>
 
             <h3>10. Seus Direitos (Art. 18 da LGPD)</h3>
-            <p>Como titular, você tem direito a confirmar tratamento, acessar, corrigir, solicitar anonimização, portabilidade ou eliminação de dados. Contato: infra.procint.ariquemes@ifro.edu.br.</p>
+            <p>Como titular dos dados, você tem direito a:</p>
+            <ul>
+                <li>Confirmar a existência de tratamento dos seus dados;</li>
+                <li>Acessar seus dados;</li>
+                <li>Corrigir dados incompletos, inexatos ou desatualizados;</li>
+                <li>Solicitar anonimização, bloqueio ou eliminação de dados desnecessários ou tratados em desconformidade com a LGPD;</li>
+                <li>Solicitar a portabilidade dos seus dados;</li>
+                <li>Solicitar a eliminação dos dados tratados com base no seu consentimento;</li>
+                <li>Obter informações sobre entidades públicas e privadas com as quais compartilhamos seus dados;</li>
+                <li>Revogar o consentimento a qualquer momento.</li>
+            </ul>
+            <p>Para exercer esses direitos, entre em contato pelo e-mail infra.procint.ariquemes@ifro.edu.br.</p>
 
             <h3>11. Menores de Idade</h3>
-            <p>O aplicativo não é direcionado a crianças menores de 13 anos.</p>
+            <p>O aplicativo não é direcionado a crianças menores de 13 anos. Caso identifiquemos o tratamento de dados de um menor sem o consentimento adequado dos responsáveis legais, procederemos com a exclusão dos dados.</p>
 
             <h3>12. Alterações a esta Política</h3>
-            <p>Podemos atualizar esta Política periodicamente. A versão vigente estará sempre disponível nesta página.</p>
+            <p>Podemos atualizar esta Política de Privacidade periodicamente. A versão vigente estará sempre disponível nesta página, com a respectiva data de atualização no topo. Mudanças relevantes serão comunicadas pelos canais do aplicativo.</p>
 
             <h3>13. Contato</h3>
-            <p>E-mail: infra.procint.ariquemes@ifro.edu.br | Reclamações à ANPD: gov.br/anpd</p>
+            <p>Dúvidas, solicitações e reclamações relacionadas ao tratamento de dados pessoais:<br>
+            E-mail: infra.procint.ariquemes@ifro.edu.br<br>
+            Você também pode apresentar reclamação à Autoridade Nacional de Proteção de Dados (ANPD): gov.br/anpd.</p>
         </div>
 
         <!-- TERMOS DE USO -->
@@ -227,47 +266,54 @@
             <h2>Termos de Uso</h2>
             <div class="update-date">Última atualização: 18 de abril de 2026</div>
             
-            <p>Estes <strong>Termos de Uso</strong> regulam o acesso e a utilização do aplicativo <strong>Conecta Ariquemes</strong> ("aplicativo", "nós"), desenvolvido para aproximar o cidadão dos serviços públicos municipais. Ao utilizar o aplicativo, você concorda expressamente com os termos abaixo.</p>
+            <p>Estes <strong>Termos de Uso</strong> regulam o acesso e a utilização do aplicativo <strong>Conecta Ariquemes</strong> ("aplicativo", "nós"), desenvolvido para aproximar o cidadão dos serviços públicos municipais.</p>
+            <p>Ao baixar, instalar, cadastrar-se ou utilizar o aplicativo, você ("usuário") concorda expressamente com os termos abaixo. Caso não concorde com alguma destas condições, você não deve utilizar o aplicativo.</p>
 
             <h3>1. Objeto do Aplicativo</h3>
-            <p>O Conecta Ariquemes é uma ferramenta digital voltada à facilitação da comunicação entre o cidadão e os serviços públicos, permitindo o registro de denúncias urbanas, manifestações de ouvidoria e consulta a serviços locais.</p>
+            <p>O <strong>Conecta Ariquemes</strong> é uma ferramenta digital voltada à facilitação da comunicação entre o cidadão e os serviços públicos, permitindo o registro de denúncias urbanas, manifestações de ouvidoria, consulta a serviços locais (como farmácias) e recebimento de informativos institucionais.</p>
 
             <h3>2. Cadastro e Acesso (Keycloak)</h3>
             <ul>
-                <li><strong>2.1.</strong> O acesso a determinadas funcionalidades exige a criação de conta autenticada via <strong>Keycloak</strong>.</li>
-                <li><strong>2.2.</strong> Você é responsável pela veracidade dos dados informados e pela segurança de suas credenciais.</li>
-                <li><strong>2.3.</strong> É terminantemente proibido o uso de identidades falsas.</li>
+                <li><strong>2.1.</strong> O acesso a determinadas funcionalidades do aplicativo exige a criação de uma conta de usuário autenticada por meio do serviço <strong>Keycloak</strong>.</li>
+                <li><strong>2.2.</strong> Você é o único responsável pela veracidade dos dados informados no seu cadastro, bem como pela segurança e sigilo das suas credenciais de acesso.</li>
+                <li><strong>2.3.</strong> É terminantemente proibido o uso de identidades falsas ou o cadastro em nome de terceiros sem autorização.</li>
             </ul>
 
             <h3>3. Conduta do Usuário e Regras de Utilização</h3>
-            <p>Ao utilizar o aplicativo, você se compromete a <strong>não</strong>:</p>
+            <p>Ao utilizar o Conecta Ariquemes, você se compromete a <strong>não</strong>:</p>
             <ul>
-                <li><strong>3.1.</strong> Enviar denúncias falsas, trotes ou informações fraudulentas.</li>
-                <li><strong>3.2.</strong> Publicar conteúdos ofensivos, difamatórios, discriminatórios ou que violem leis vigentes.</li>
-                <li><strong>3.3.</strong> Enviar fotografias que infrinjam direitos autorais ou de imagem de terceiros.</li>
-                <li><strong>3.4.</strong> Tentar burlar segurança, realizar engenharia reversa ou sobrecarregar servidores.</li>
+                <li><strong>3.1.</strong> Enviar denúncias falsas, trotes, informações notoriamente inexatas ou conteúdo fraudulento que prejudique a gestão pública ou o atendimento a outros cidadãos.</li>
+                <li><strong>3.2.</strong> Publicar ou anexar conteúdos de caráter ofensivo, difamatório, calunioso, pornográfico, racista, discriminatório ou que violem os direitos humanos e as leis vigentes.</li>
+                <li><strong>3.3.</strong> Enviar fotografias ou mídias que infrinjam direitos autorais ou de imagem de terceiros nas denúncias urbanas.</li>
+                <li><strong>3.4.</strong> Tentar burlar mecanismos de segurança, realizar engenharia reversa, sobrecarregar os servidores ou interferir no funcionamento técnico do aplicativo.</li>
             </ul>
 
             <h3>4. Moderação e Penalidades</h3>
             <ul>
-                <li><strong>4.1.</strong> A equipe reserva-se o direito de recusar ou remover denúncias que violem estes Termos.</li>
-                <li><strong>4.2.</strong> Contas que violarem as regras poderão ser banidas, podendo os dados ser encaminhados às autoridades em caso de infração legal.</li>
+                <li><strong>4.1.</strong> A Equipe Mobile Eixo Saúde e os órgãos competentes reservam-se o direito de analisar, recusar, ocultar ou remover denúncias e manifestações que violem estes Termos de Uso.</li>
+                <li><strong>4.2.</strong> Contas de usuários que violarem as regras de conduta poderão ser suspensas ou banidas permanentemente, sem aviso prévio, podendo os dados ser encaminhados às autoridades competentes em caso de infração legal (como falsidade ideológica ou comunicação falsa de crime/infração).</li>
             </ul>
 
             <h3>5. Propriedade Intelectual</h3>
-            <p>Todos os direitos de design, interface, código-fonte e logotipos pertencem exclusivamente aos desenvolvedores e instituição parceira.</p>
+            <ul>
+                <li><strong>5.1.</strong> Todos os direitos de propriedade intelectual relativos ao design, interface, código-fonte, marcas, logotipos e conteúdos institucionais do Conecta Ariquemes pertencem exclusivamente aos desenvolvedores e à instituição de ensino/parceiros responsáveis.</li>
+                <li><strong>5.2.</strong> O uso do aplicativo não confere ao usuário nenhum direito de propriedade sobre a tecnologia ou marcas nele inseridas.</li>
+            </ul>
 
             <h3>6. Limitação de Responsabilidade</h3>
-            <p>O aplicativo é fornecido "no estado em que se encontra", sem garantias de funcionamento 100% ininterrupto devido a falhas de rede, GPS ou serviços integrados de terceiros.</p>
+            <ul>
+                <li><strong>6.1.</strong> O aplicativo é fornecido "no estado em que se encontra". Embora nos esforcemos para garantir a estabilidade, não garantimos que o serviço será ininterrupto, livre de erros ou falhas de conexão de rede/GPS.</li>
+                <li><strong>6.2.</strong> Não nos responsabilizamos por danos decorrentes de mau uso da plataforma, falhas no dispositivo do usuário ou indisponibilidade temporária de serviços de terceiros integrados (como o Keycloak ou o ViaCEP).</li>
+            </ul>
 
             <h3>7. Alterações nos Termos</h3>
-            <p>Estes termos podem ser atualizados periodicamente, entrando em vigor imediatamente após a publicação.</p>
+            <p><strong>7.1.</strong> Podemos atualizar estes Termos de Uso periodicamente para refletir melhorias no aplicativo ou exigências legais. A versão atualizada entrará em vigor imediatamente após a publicação no aplicativo, sendo indicada a data da última modificação no topo do documento.</p>
 
             <h3>8. Legislação e Foro</h3>
-            <p>Regido pelas leis da República Federativa do Brasil, com foro na comarca competente.</p>
+            <p><strong>8.1.</strong> Estes Termos são regidos pelas leis da República Federativa do Brasil. Eventuais litígios decorrentes do uso do aplicativo serão resolvidos no foro da comarca competente.</p>
 
             <h3>9. Contato</h3>
-            <p>Dúvidas pelo e-mail: infra.procint.ariquemes@ifro.edu.br</p>
+            <p>Em caso de dúvidas sobre estes Termos de Uso, entre em contato conosco pelo e-mail: <strong>infra.procint.ariquemes@ifro.edu.br</strong>.</p>
         </div>
     </div>
 
@@ -277,17 +323,12 @@
 
     <script>
         function switchTab(tabId, event) {
-            // Esconde todas as seções
             document.querySelectorAll('.content-section').forEach(section => {
                 section.classList.remove('active');
             });
-            
-            // Remove a classe active de todas as abas
             document.querySelectorAll('.nav-tab').forEach(tab => {
                 tab.classList.remove('active');
             });
-            
-            // Mostra a seção selecionada e ativa a aba correspondente
             document.getElementById(tabId).classList.add('active');
             event.currentTarget.classList.add('active');
         }
